@@ -1,0 +1,32 @@
+###
+GET http://localhost:9000/api/banks
+Content-Type: application/json
+
+###
+# GET http://localhost:9000/api/banks/{{accountNumber}}
+GET http://localhost:9000/api/banks/1234
+Content-Type: application/json
+
+###
+POST http://localhost:9000/api/banks
+Content-Type: application/json
+
+{
+  "accountNumber": "qwert",
+  "transactionFee": 10,
+  "trust": 80.0
+}
+
+###
+PATCH http://localhost:9000/api/banks
+Content-Type: application/json
+
+{
+  "accountNumber": "1234",
+  "transactionFee": 90,
+  "trust": 90.0
+}
+
+###
+# DELETE http://localhost:9000/api/banks/{{accountNumber}}
+DELETE http://localhost:9000/api/banks/1234
